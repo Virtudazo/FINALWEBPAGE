@@ -22,8 +22,7 @@
             <a href="#port" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
             <a href="#gar" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> GALLERY</a>
             <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            </a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red"> </a>
         </div>
 
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -37,9 +36,9 @@
 
     <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
         <div class="w3-display-middle" style="white-space:nowrap;">
-          <span class="w3-center w3-padding-medium w3-black w3-xlarge w3-wide w3-animate-opacity">WELCOME TO <span class="w3-hide-small">SWEET ESCAPE</span> </span>
+              <p><span style="color: black;"> WELCOME TO SWEET ESCAPE</span></p>
         </div>
-      </div>
+    </div>
       
                
 
@@ -103,7 +102,6 @@
             <p class="w3-center"><em>Here are some of my examples<br> Click on the images to make them bigger</em></p>
             <br>
 
-
             <div class="w3-row-padding w3-center">
                 <div class="w3-col m3">
                     <img src="g1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
@@ -125,7 +123,7 @@
                         alt="FLOWER" id="pic"> <br></br>
                 </div>
             </div>
-            <!--until here ang tarung -->
+<!----until here ang tarung--------- -->
 
             <div class="w3-row-padding w3-center w3-section">
                 <div class="w3-col m3">
@@ -149,7 +147,7 @@
                 </div>
             </div>
             
-<!--naapil na dari natarung-->
+<!--naapil na dari natarung------->
             <div class="w3-row-padding w3-center w3-section">   
                 <div class="w3-col m3">
                     <img src="A.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
@@ -171,7 +169,7 @@
                         alt="CONCERN" id="pic"> <br></br>
                 </div>
             </div>
-            <!--apil na ni so?-->
+<!-------------------------apil na ni so?--------------->
             <div class="w3-row-padding w3-center w3-section">   
                 <div class="w3-col m3">
                     <img src="E.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
@@ -193,7 +191,7 @@
                         alt="ME" id="pic">
                 </div>
             </div>
-            <!--okay na tawn-->
+<!------------------okay na tawn------------------>
                 
                 <div class="w3-content w3-container w3-padding-64" id="portfolio" id="pic">
                     <br><br id="port"><br><br>
@@ -249,7 +247,7 @@
                         </div>
 
                         <div class="w3-col m3">
-                            <img src="11.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+                            <img src="finalbg.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
                                 alt="Empty ghost train" id="pic">
                                 <p class="w3-center"><em>I know this is not the right time<br> </em> I just wanna make right things in the time I am with you </p>
                                 <br>
@@ -258,7 +256,7 @@
                         <div class="w3-col m3">
                             <img src="g10.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
                                 alt="Sailing" id="pic">
-                                <p class="w3-center"><em>Love beyond words, this is how great my love for you<br> </em> theres no word i culd use to prove that i am so in love with you</p>
+                                <p class="w3-center"><em>Love beyond words, this is how great my love for you<br> </em> theres no word I could use to prove that i am so in love with you</p>
                                 <br>
 
                         </div>
@@ -297,23 +295,23 @@
                     </div>
 
                     <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-                    <form action="https://www.facebook.com/flore.virtudazo" target="#">
+                    <form action="/action_page.php" target="_blank" id="hehe">
                         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
                             <div class="w3-half">
-                                <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+                                <input class="w3-input w3-border" id="name" type="text" placeholder="Name" required name="Name">
                             </div>
                             <div class="w3-half">
-                                <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+                                <input class="w3-input w3-border" id="email" type="text" placeholder="Email" required name="Email">
                             </div>
                         </div>
-                        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-                        <button class="w3-button w3-black w3-right w3-section" type="submit" button onclick="myFunction"> send 
+                        <input class="w3-input w3-border" type="text" id="message" placeholder="Message" required name="Message">
+                        <button class="w3-button w3-black w3-right w3-section" onclick="notice()" type="button">
+                            <i class="fa fa-paper-plane"></i> SEND MESSAGE
                         </button>
-                        <p id="demo"></p>
-                           
-
                     </form>
+                    
                 </div>
+                
             </div>
         </div>
 
@@ -323,34 +321,7 @@
             
         </footer>
 
-        <script>
-
-            function onClick(element) {
-                document.getElementById("img01").src = element.src;
-                document.getElementById("modal01").style.display = "block";
-                var captionText = document.getElementById("caption");
-                captionText.innerHTML = element.alt;
-            }
-
-            window.onscroll = function () { myFunction() };
-            function myFunction() {
-                var navbar = document.getElementById("myNavbar");
-                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-                } else {
-                    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-                }
-            }
-
-            function toggleFunction() {
-                var x = document.getElementById("navDemo");
-                if (x.className.indexOf("w3-show") == -1) {
-                    x.className += " w3-show";
-                } else {
-                    x.className = x.className.replace(" w3-show", "");
-                }
-            }
-        </script>
+        
 
     </div>
     </div>
